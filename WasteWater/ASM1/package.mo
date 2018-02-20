@@ -62,10 +62,11 @@ model nitri "ASM1 nitrification tank"
   extends Interfaces.ASM1base;
 
   // tank specific parameters
-  parameter Modelica.SIunits.Volume V=1000 "Volume of nitrification tank";
+  parameter Modelica.SIunits.Volume V=1333 "Volume of nitrification tank";
 
   // aeration system dependent parameters
-  parameter Real alpha=0.7 "Oxygen transfer factor";
+  parameter Real alpha=0.7;
+  parameter Real Kla=240 "Oxygen transfer factor";
 //  parameter Modelica.SIunits.Length de=4.5 "depth of aeration";
   parameter Real R_air=23.5 "specific oxygen feed factor [gO2/(m^3*m)]";
   WWU.MassConcentration So_sat "Dissolved oxygen saturation";
@@ -89,8 +90,8 @@ equation
   // aeration [mgO2/l]; AirIn.Q_air needs to be in
   // Simulationtimeunit [m3*day^-1]
   // aeration = (alpha*(So_sat - So)/So_sat*AirIn.Q_air*R_air*de)/V;
-  aeration = (1/V)*( AirIn.Q_air*In.So + R_air*V + alpha*V*(So_sat - Out.So) - AirIn.Q_air*Out.So);
-  // aeration = Kla * (So_sat - So);
+  // aeration = (1/V)*( AirIn.Q_air*In.So + R_air*V + alpha*V*(So_sat - Out.So) - AirIn.Q_air*Out.So);
+  aeration = Kla * (So_sat - So);
 
   // volume dependent dilution term of each concentration
 
@@ -414,11 +415,27 @@ model WWSource "Wastewater source"
   extends WasteWater.Icons.WWSource;
   Interfaces.WWFlowAsm1out Out annotation (Placement(transformation(extent={{88,
             -80},{108,-60}})));
-  Modelica.Blocks.Interfaces.RealInput data[14]
+  Modelica.Blocks.Interfaces.RealInput data[14];
+
     annotation (Placement(transformation(extent={{-100,-10},{-80,10}})));
 equation
 
-  Out.Q =-data[1];
+  Out.Q =-18446;
+  Out.Si =30.0;
+  Out.Ss =69.50;
+  Out.Xi =51.20;
+  Out.Xs =202.32;
+  Out.Xbh =28.17;
+  Out.Xba =0;
+  Out.Xp =0;
+  Out.So =0;
+  Out.Sno =0;
+  Out.Snh =31.56;
+  Out.Snd =6.95;
+  Out.Xnd =10.59;
+  Out.Salk =7.00;
+
+  /*Out.Q =-data[1];
   Out.Si =data[2];
   Out.Ss =data[3];
   Out.Xi =data[4];
@@ -431,7 +448,7 @@ equation
   Out.Snh =data[11];
   Out.Snd =data[12];
   Out.Xnd =data[13];
-  Out.Salk =data[14];
+  Out.Salk =data[14];*/
 
   annotation (
     Documentation(info="This component provides all ASM1 data at the influent of a wastewater treatment plant.
