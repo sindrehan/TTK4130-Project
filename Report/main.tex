@@ -1,6 +1,6 @@
 \documentclass[
-	10pt,								% Schriftgröße
-	letterpaper,         		% Papierformat
+	10pt,				    % Schriftgröße
+	a4paper,         		% Papierformat
 	twocolumn,
 	]{article}
 
@@ -39,17 +39,17 @@
 
 
 \title{\Large \bf
-Modelica project - Group xxx}
+Modelica project - Group 36}
 
 \date{}
 
 \preauthor{}
 \DeclareRobustCommand{\authorthing}{
 \begin{center}
-\begin{tabular}{c c c}
-\textit{Name 1} & \textit{Name 2}  & \textit{Name 3} \\ 
-\color{white} hallo \\
-\textit{Name 4} & \textit{Name 5} &  \\ 
+\begin{tabular}{c c}
+\textit{Sindre Hansen} & \textit{Carita Gyldenskog Ranvik}  \\ 
+& \\ % Blank row
+\textit{Ivan Soløst} & \textit{Thomas Sundvoll}  \\ 
 \end{tabular}
 \end{center}}
 \author{\authorthing}
@@ -76,30 +76,22 @@ A short abstract (50 to 100 words) in a single paragraph should be included: Tel
 %
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Introduction}\label{sec:Introduction} 
-The body of the paper begins with the Introduction. In the introduction you should give a brief overview over Waste Water treatment, answer some questions, for example: What is the main process described by the activated sludge model 1? Why do you need an aerobic and an anaerobic tank? What happens in the aerobic tank and what in the anaerobic (anoxic) tank? What kind of substances do you find in the activated sludge model 1? What does an X indicate and what does and S indicated in the description of the components? What is ammonium? What is denitrification? What is nitrification? The maximal length of the INTRODUCTION is one page.  
+\input{Report/introduction.tex}
 %
 %
-%
-\section*{METHODS AND THEORY }\label{sec:METHODS}
-In this section you may want to elaborate a little bit about the theory and methods you used during the project. This can be for instance controller tunings or the relative gain array. \\
-\indent This section should only focus on the methods and theory. It should not contain any results from the project. The maximal length of the METHODS AND THEORY section is one page.  
+\input{Report/methods.tex}
 %
 %
-\section*{Assignment 1}\label{sec:Ass1}
-$\dots$
+\input{Report/assignment1.tex}
 %
 %
-\section*{Assignment 2}\label{sec:Ass1}
-$\dots$
+\input{Report/assignment2.tex}
 %
 %
-\section*{Assignment 3}\label{sec:Ass1}
-$\dots$
+\input{Report/assignment3.tex}
 %
 %
-\section*{Assignment 4}\label{sec:Ass1}
-$\dots$
+\input{Report/assignment4.tex}
 %
 %
 \section*{Conclusion}
@@ -112,6 +104,4 @@ Figures and tables
 
 \end{appendices}
 
-
-% that's all folks
 \end{document}
