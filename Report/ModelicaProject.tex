@@ -1,0 +1,117 @@
+\documentclass[
+	10pt,								% Schriftgröße
+	letterpaper,         		% Papierformat
+	twocolumn,
+	]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{natbib}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[font={footnotesize}]{subcaption}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color, colortbl}
+\usepackage{titling}
+\usepackage{balance}
+\usepackage[letterpaper, inner=1.2cm,top=1.3cm,bottom=2.5cm, textheight=24.0cm,textwidth=19.19cm]{geometry}
+\setlength{\columnsep}{0.89cm}
+\usepackage{cleveref}
+\usepackage{appendix}
+
+\captionsetup{labelfont={normalsize},textfont={normalsize}}
+\captionsetup[subfigure]{labelfont={normalsize},textfont={normalsize}}
+
+\captionsetup[table]{labelfont={normalsize}, textfont={normalsize}, labelsep=period}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\usepackage{titlesec}
+
+\titleformat*{\section}{\filright\normalsize\rmfamily\uppercase}
+%\titleformat*{\subsection}{\large\bfseries}
+%\titleformat*{\subsubsection}{\large\bfseries\itshape}
+\titleformat*{\subsection}{\normalsize\rmfamily\bfseries}
+%\titleformat{\subsubsection}[block]{\hspace{1em}\small\rmfamily}
+
+
+\title{\Large \bf
+Modelica project - Group xxx}
+
+\date{}
+
+\preauthor{}
+\DeclareRobustCommand{\authorthing}{
+\begin{center}
+\begin{tabular}{c c c}
+\textit{Name 1} & \textit{Name 2}  & \textit{Name 3} \\ 
+\color{white} hallo \\
+\textit{Name 4} & \textit{Name 5} &  \\ 
+\end{tabular}
+\end{center}}
+\author{\authorthing}
+\postauthor{}
+
+
+\begin{document}
+%\newtheorem{theorem}{Theorem}
+\renewcommand\figurename{Fig.}
+
+%\begin{titlingpage}
+\setlength{\droptitle}{1.0cm}
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+%\end{titlingpage}
+%\thispagestyle{empty}
+%\pagestyle{empty}
+
+\normalsize
+
+\section*{abstract}
+A short abstract (50 to 100 words) in a single paragraph should be included: Tell new or key findings and how you did this study.    
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introduction}\label{sec:Introduction} 
+The body of the paper begins with the Introduction. In the introduction you should give a brief overview over Waste Water treatment, answer some questions, for example: What is the main process described by the activated sludge model 1? Why do you need an aerobic and an anaerobic tank? What happens in the aerobic tank and what in the anaerobic (anoxic) tank? What kind of substances do you find in the activated sludge model 1? What does an X indicate and what does and S indicated in the description of the components? What is ammonium? What is denitrification? What is nitrification? The maximal length of the INTRODUCTION is one page.  
+%
+%
+%
+\section*{METHODS AND THEORY }\label{sec:METHODS}
+In this section you may want to elaborate a little bit about the theory and methods you used during the project. This can be for instance controller tunings or the relative gain array. \\
+\indent This section should only focus on the methods and theory. It should not contain any results from the project. The maximal length of the METHODS AND THEORY section is one page.  
+%
+%
+\section*{Assignment 1}\label{sec:Ass1}
+$\dots$
+%
+%
+\section*{Assignment 2}\label{sec:Ass1}
+$\dots$
+%
+%
+\section*{Assignment 3}\label{sec:Ass1}
+$\dots$
+%
+%
+\section*{Assignment 4}\label{sec:Ass1}
+$\dots$
+%
+%
+\section*{Conclusion}
+A brief summary of your results should be included in this section toward the end of the paper.
+%
+%
+\begin{appendices}
+\section*{Appendixes}
+Figures and tables 
+
+\end{appendices}
+
+
+% that's all folks
+\end{document}
