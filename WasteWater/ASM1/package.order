@@ -22,8 +22,13 @@ sensor_TKN
 sensor_TSS
 aeration_energy
 effluent_quality
+Aeration_energy
+Effluent_quality
+Influent_quality
+Sludge_production
 Examples
 Interfaces
 PreClar
 SecClar
 pump_energy
+
