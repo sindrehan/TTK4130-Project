@@ -417,7 +417,6 @@ model WWSource "Wastewater source"
             -80},{108,-60}})));
   Modelica.Blocks.Interfaces.RealInput data[14];
 
-    annotation (Placement(transformation(extent={{-100,-10},{-80,10}})));
 equation
 
   Out.Q =-18446;
@@ -450,7 +449,7 @@ equation
   Out.Xnd =data[13];
   Out.Salk =data[14];*/
 
-  annotation (
+    annotation (Placement(transformation(extent={{-100,-10},{-80,10}})),
     Documentation(info="This component provides all ASM1 data at the influent of a wastewater treatment plant.
 The dimension of InPort is 14.
 
