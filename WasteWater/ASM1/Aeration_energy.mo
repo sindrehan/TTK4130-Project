@@ -1,5 +1,5 @@
 within WasteWater.ASM1;
-model Aeration_energy "Ideal sensor to measure chemical oxygen demand (COD)"
+model aeration_energy "Ideal sensor to measure chemical oxygen demand (COD)"
 
   extends WasteWater.Icons.sensor_COD;
 
@@ -14,6 +14,7 @@ model Aeration_energy "Ideal sensor to measure chemical oxygen demand (COD)"
         transformation(extent={{88,-10},{108,10}})));
 
   Real T(start=1e-3);
+  Real So_sat = 8;
 
 equation
   der(T) = 1.0;
@@ -21,4 +22,4 @@ equation
 
   annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
             -100},{100,100}}), graphics));
-end Aeration_energy;
+end aeration_energy;

@@ -1,4 +1,3 @@
-
 SecClarModTakacs
 blower
 pump
@@ -21,9 +20,10 @@ sensor_O2
 sensor_Q
 sensor_TKN
 sensor_TSS
-Aeration_energy
-Effluent_quality
+aeration_energy
+effluent_quality
 Examples
 Interfaces
 PreClar
 SecClar
+pump_energy

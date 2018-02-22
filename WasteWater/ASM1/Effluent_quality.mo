@@ -1,5 +1,5 @@
 within WasteWater.ASM1;
-model Effluent_quality "Influent quality index"
+model effluent_quality "Influent quality index"
 
   extends WasteWater.Icons.sensor_COD;
   extends Interfaces.stoichiometry;
@@ -31,4 +31,4 @@ equation
   annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
             {100,100}}), graphics), Diagram(coordinateSystem(
           preserveAspectRatio=false, extent={{-100,-100},{100,100}}), graphics));
-end Effluent_quality;
+end effluent_quality;
