@@ -24,8 +24,9 @@ aeration_energy
 effluent_quality
 Influent_quality
 Sludge_production
+mixing_energy
+pump_energy
 Examples
 Interfaces
 PreClar
 SecClar
-pump_energy
