@@ -1,7 +1,7 @@
 within WasteWater.ASM1;
 model effluent_quality "Influent quality index"
 
-  extends WasteWater.Icons.sensor_COD;
+  extends WasteWater.Icons.Effluent_quality;
   extends Interfaces.stoichiometry;
 
   Interfaces.WWFlowAsm1in In annotation (Placement(transformation(extent={{-74,36},

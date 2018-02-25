@@ -22,8 +22,8 @@ sensor_TKN
 sensor_TSS
 aeration_energy
 effluent_quality
-Influent_quality
-Sludge_production
+influent_quality
+sludge_production
 mixing_energy
 pump_energy
 Examples

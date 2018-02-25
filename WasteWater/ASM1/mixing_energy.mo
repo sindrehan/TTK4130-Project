@@ -1,7 +1,7 @@
 within WasteWater.ASM1;
 model mixing_energy "Influent quality index"
 
-  extends WasteWater.Icons.Influent_quality;
+  extends WasteWater.Icons.Mixing_energy;
   extends Interfaces.stoichiometry;
 
   Interfaces.WWFlowAsm1in In annotation (Placement(transformation(extent={{-10,

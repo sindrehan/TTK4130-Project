@@ -1,5 +1,5 @@
 within WasteWater.ASM1;
-model Sludge_production "Sludge production"
+model sludge_production "Sludge production"
 
   extends WasteWater.Icons.Sludge_production;
   extends Interfaces.stoichiometry;
@@ -16,4 +16,4 @@ equation
   annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
             {100,100}}), graphics), Diagram(coordinateSystem(
           preserveAspectRatio=false, extent={{-100,-100},{100,100}}), graphics));
-end Sludge_production;
+end sludge_production;

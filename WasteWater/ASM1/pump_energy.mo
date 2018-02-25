@@ -1,7 +1,7 @@
 within WasteWater.ASM1;
 model pump_energy "Total pump energy"
 
-  extends WasteWater.Icons.sensor_Q;
+  extends WasteWater.Icons.Pump_energy;
 
   Interfaces.WWFlowAsm1in In_a annotation (Placement(transformation(extent={{-50,46},
             {-30,66}})));
@@ -19,11 +19,6 @@ model pump_energy "Total pump energy"
   Modelica.Blocks.Interfaces.RealOutput PE( start = 0);
 
   Real T(start=1e-3);
-    annotation (Placement(transformation(
-        origin={0,-98},
-        extent={{-10,-10},{10,10}},
-        rotation=270)), Diagram(coordinateSystem(preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}}), graphics));
 equation
 
   In_a.Q + Out_a.Q = 0;
@@ -76,7 +71,11 @@ equation
   In_w.Xnd = Out_w.Xnd;
   In_w.Salk = Out_w.Salk;
 
-  annotation (
+    annotation (Placement(transformation(
+        origin={0,-98},
+        extent={{-10,-10},{10,10}},
+        rotation=270)), Diagram(coordinateSystem(preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}}), graphics),
     Documentation(info="This component measures the flow of an ASM1 wastewater stream and provides
 the result as output signal (to be further processed with blocks of
 the Modelica.Blocks library).

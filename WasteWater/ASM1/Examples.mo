@@ -1115,7 +1115,7 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
                            annotation (Placement(transformation(extent={{-69,76},
               {-49,96}})));
     WasteWater.ASM1.aeration_energy aeration_energy
-      annotation (Placement(transformation(extent={{17,68},{37,88}})));
+      annotation (Placement(transformation(extent={{-10,73},{10,93}})));
     WasteWater.ASM1.pump_energy pump_energy
       annotation (Placement(transformation(extent={{27,-24},{47,-4}})));
     WasteWater.ASM1.effluent_quality effluent_quality1
@@ -1170,7 +1170,7 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
         color={0,0,0},
         smooth=Smooth.None));
     connect(tank5.Kla, aeration_energy.KlaTank5) annotation (Line(
-        points={{4.3,8.3},{4.3,14},{-10,14},{-10,67},{31,67},{31,71.6}},
+        points={{4.3,8.3},{4.3,14},{-10,14},{-10,67},{4,67},{4,76.6}},
         color={0,0,127},
         smooth=Smooth.None));
     connect(mixer.In2, ReturnPump.Out) annotation (Line(

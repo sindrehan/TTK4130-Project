@@ -2737,7 +2737,8 @@ package Icons "Icon definitions for the WasteWater library"
       Documentation(info="Icon for a secondary clarifier"));
   end SecClar;
 
-  partial model SecClarKrebs "Icon for a secondary clarifier based on Krebs model"
+  partial model SecClarKrebs
+    "Icon for a secondary clarifier based on Krebs model"
     annotation (
       Icon(coordinateSystem(
           preserveAspectRatio=false,
@@ -2853,7 +2854,8 @@ package Icons "Icon definitions for the WasteWater library"
       Documentation(info="Icon for a secondary clarifier"));
   end SecClarKrebs;
 
-  partial model SecClarSimple "Icon for a secondary clarifier based on simple model"
+  partial model SecClarSimple
+    "Icon for a secondary clarifier based on simple model"
     annotation (
       Icon(coordinateSystem(
           preserveAspectRatio=false,
@@ -5772,7 +5774,8 @@ package Icons "Icon definitions for the WasteWater library"
             thickness=0.5)}));
   end sensor_Q;
 
-  partial model sensor_TKN "Icon for a Kjeldal nitrogen and total nitrogen sensor"
+  partial model sensor_TKN
+    "Icon for a Kjeldal nitrogen and total nitrogen sensor"
     annotation (
       Icon(coordinateSystem(
           preserveAspectRatio=false,
@@ -6114,8 +6117,9 @@ package Icons "Icon definitions for the WasteWater library"
             lineColor={0,0,0},
             fillColor={0,0,0},
             fillPattern=FillPattern.Solid),
-          Text(extent={{-36,-10},{36,-32}}, textString=
-                                                "COD"),
+          Text(extent={{-36,-10},{36,-32}},
+            textString="IQ",
+            lineColor={0,0,0}),
           Line(
             points={{0,-50},{0,-90}},
             thickness=0.5),
@@ -6202,13 +6206,374 @@ package Icons "Icon definitions for the WasteWater library"
             lineColor={0,0,0},
             fillColor={0,0,0},
             fillPattern=FillPattern.Solid),
-          Text(extent={{-36,-10},{36,-32}}, textString=
-                                                "COD"),
+          Text(extent={{-36,-10},{36,-32}},
+            textString="SP",
+            lineColor={0,0,0}),
           Line(
             points={{0,-50},{0,-90}},
             thickness=0.5),
           Line(points={{50,0},{88,0}})}));
   end Sludge_production;
+
+  partial model Effluent_quality "Icon for a efffluent quality sensor"
+
+    annotation (
+      Icon(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-100,100},{100,60}}, textString=
+                                                 "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            lineColor={0,0,0},
+            textString="EQ"),
+          Line(
+            points={{0,-50},{0,-90}},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}})}),
+      Documentation(info="Icon for a chemical oxygen demand sensor "),
+      Diagram(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-100,100},{100,60}}, textString=
+                                                 "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            textString="EQ",
+            lineColor={0,0,0}),
+          Line(
+            points={{0,-50},{0,-90}},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}})}));
+  end Effluent_quality;
+
+  partial model Aeration_energy "Icon for a aeration energy sensor"
+
+    annotation (
+      Icon(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-100,100},{100,60}}, textString=
+                                                 "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            lineColor={0,0,0},
+            textString="AE"),
+          Line(
+            points={{0,-50},{0,-90}},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}})}),
+      Documentation(info="Icon for a chemical oxygen demand sensor "),
+      Diagram(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-100,100},{100,60}}, textString=
+                                                 "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            textString="AE",
+            lineColor={0,0,0}),
+          Line(
+            points={{0,-50},{0,-90}},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}})}));
+  end Aeration_energy;
+
+  partial model Pump_energy "Icon for a pump energy sensor"
+
+    annotation (
+      Icon(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-100,100},{100,60}}, textString=
+                                                 "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            lineColor={0,0,0},
+            textString="PE"),
+          Line(
+            points={{0,-50},{0,-90}},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}})}),
+      Documentation(info="Icon for a chemical oxygen demand sensor "),
+      Diagram(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-100,100},{100,60}}, textString=
+                                                 "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            textString="PE",
+            lineColor={0,0,0}),
+          Line(
+            points={{0,-50},{0,-90}},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}})}));
+  end Pump_energy;
+
+  partial model Mixing_energy "Icon for a mixing energy sensor"
+
+    annotation (
+      Icon(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-100,100},{100,60}}, textString=
+                                                 "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            lineColor={0,0,0},
+            textString="ME"),
+          Line(
+            points={{0,-50},{0,-90}},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}})}),
+      Documentation(info="Icon for a chemical oxygen demand sensor "),
+      Diagram(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-100,100},{100,60}}, textString=
+                                                 "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            lineColor={0,0,0},
+            textString="ME"),
+          Line(
+            points={{0,-50},{0,-90}},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}})}));
+  end Mixing_energy;
   annotation (
     Documentation(info="This package is part of the WasteWater Library and contains
 definitions for the graphical layout of components which are
