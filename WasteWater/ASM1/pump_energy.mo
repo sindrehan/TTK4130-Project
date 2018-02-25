@@ -16,7 +16,7 @@ model pump_energy "Total pump energy"
   Interfaces.WWFlowAsm1out Out_w annotation (Placement(transformation(extent={{30,-68},
             {50,-48}})));
 
-  Modelica.Blocks.Interfaces.RealOutput PE;
+  Modelica.Blocks.Interfaces.RealOutput PE( start = 0);
 
   Real T(start=1e-3);
     annotation (Placement(transformation(
