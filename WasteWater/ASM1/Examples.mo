@@ -1078,7 +1078,7 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
           extent={{-10,-10},{10,10}},
           rotation=180)));
     ASM1.pump ReturnPump(Q_max=18446) annotation (Placement(transformation(
-          origin={26,-26},
+          origin={8,-30},
           extent={{-10,-10},{10,10}},
           rotation=180)));
     ASM1.pump WastePump(Q_max=385) annotation (Placement(transformation(extent=
@@ -1117,7 +1117,7 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
     WasteWater.ASM1.aeration_energy aeration_energy
       annotation (Placement(transformation(extent={{17,68},{37,88}})));
     WasteWater.ASM1.pump_energy pump_energy
-      annotation (Placement(transformation(extent={{35,-22},{55,-2}})));
+      annotation (Placement(transformation(extent={{27,-24},{47,-4}})));
   equation
     connect(divider.Out1, Settler.Feed) annotation (Line(points={{40,6.6},{44,
             6.6},{44,6.4},{48,6.4}}));
@@ -1134,8 +1134,6 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
             {-32,36.5},{-32.5,36.5}}));
     connect(RecyclePump.Out, mixer.In3) annotation (Line(points={{-94,-14.8},{
             -104,-14.8},{-104,27.5}}));
-    connect(ReturnPump.Out, mixer.In2) annotation (Line(points={{16,-28.8},{
-            15.5,-28.8},{15.5,-30},{-112,-30},{-112,31.5},{-104,31.5}}));
     connect(WastePump.Out, WasteSludge.In) annotation (Line(points={{79,-42.2},
             {81,-42.2},{81,-42},{83,-42},{83,-42.2},{87,-42.2}}));
     connect(WastePump.u, Constant2.y)
@@ -1153,7 +1151,7 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
     connect(Effluent.In, Settler.Effluent) annotation (Line(points={{88,-16},{
             78.5,-16},{78.5,10.7},{68.2,10.7}}));
     connect(Constant2.y, ReturnPump.u)
-      annotation (Line(points={{34.95,-60.5},{46,-60.5},{46,-28.5},{34.9,-28.5}},
+      annotation (Line(points={{34.95,-60.5},{46,-60.5},{46,-32.5},{16.9,-32.5}},
                                                                        color={0,
             0,255}));
     connect(tank5.MeasurePort, sensor_O2.In) annotation (Line(points={{9.5,8.5},
@@ -1183,28 +1181,32 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
         points={{4.3,8.3},{4.3,14},{-10,14},{-10,67},{31,67},{31,71.6}},
         color={0,0,127},
         smooth=Smooth.None));
-    connect(Settler.Waste, pump_energy.In_w) annotation (Line(
-        points={{61,-4.6},{65,-4.6},{65,-6},{68,-6},{68,-14},{51.8,-14}},
+    connect(mixer.In2, ReturnPump.Out) annotation (Line(
+        points={{-104,31.5},{-107,31.5},{-107,-32.8},{-2,-32.8}},
+        color={0,0,255},
+        smooth=Smooth.None));
+    connect(divider.Out2, pump_energy.In_a) annotation (Line(
+        points={{40,2.5},{45,2.5},{45,-3},{33,-3},{33,-8.4}},
         color={0,0,0},
         smooth=Smooth.None));
     connect(pump_energy.Out_a, RecyclePump.In) annotation (Line(
-        points={{42,-19},{-16,-19},{-16,-8.7},{-74,-8.7}},
-        color={0,0,0},
-        smooth=Smooth.None));
-    connect(pump_energy.Out_r, ReturnPump.In) annotation (Line(
-        points={{45,-22},{41,-22},{41,-22.7},{36,-22.7}},
-        color={0,0,0},
-        smooth=Smooth.None));
-    connect(pump_energy.Out_w, WastePump.In) annotation (Line(
-        points={{48,-19},{54,-19},{54,-48.3},{59,-48.3}},
-        color={0,0,0},
-        smooth=Smooth.None));
-    connect(divider.Out2, pump_energy.In_a) annotation (Line(
-        points={{40,2.5},{40,-6.6},{39.4,-6.6}},
+        points={{32.8,-19.8},{22,-19.8},{22,-8.7},{-74,-8.7}},
         color={0,0,0},
         smooth=Smooth.None));
     connect(Settler.Return, pump_energy.In_r) annotation (Line(
-        points={{55,-4.6},{53,-4.6},{53,-7},{50.2,-7}},
+        points={{55,-4.6},{55,-8.4},{42.2,-8.4}},
+        color={0,0,0},
+        smooth=Smooth.None));
+    connect(Settler.Waste, pump_energy.In_w) annotation (Line(
+        points={{61,-4.6},{61,-15.6},{43.4,-15.6}},
+        color={0,0,0},
+        smooth=Smooth.None));
+    connect(pump_energy.Out_r, ReturnPump.In) annotation (Line(
+        points={{37,-24.2},{37,-26.7},{18,-26.7}},
+        color={0,0,0},
+        smooth=Smooth.None));
+    connect(pump_energy.Out_w, WastePump.In) annotation (Line(
+        points={{41,-19.8},{41,-28},{52,-28},{52,-48.3},{59,-48.3}},
         color={0,0,0},
         smooth=Smooth.None));
     annotation (

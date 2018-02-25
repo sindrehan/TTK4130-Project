@@ -139,6 +139,7 @@ Parameters:
 "));
 end SecClarModTakacs;
 
+
 model blower "Blower for the aeration of the nitrification tanks"
 
   extends WasteWater.Icons.blower;
@@ -174,6 +175,7 @@ Parameter:
 
 "));
 end blower;
+
 
 model pump "ASM1 wastewater pump"
 
@@ -222,6 +224,7 @@ Parameter:
 
 "));
 end pump;
+
 
 model deni "ASM1 denitrification tank"
   //denitrification tank based on the ASM1 model
@@ -344,9 +347,6 @@ Parameters:
   R_air - specific oxygen feed factor [g O2/(m3*m)]
 "));
 end nitri;
-
-
-
 
 
 model FlowSource "Flowsource"
