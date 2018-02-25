@@ -3,8 +3,8 @@ model aeration_energy "Ideal sensor to measure chemical oxygen demand (COD)"
 
   extends WasteWater.Icons.Aeration_energy;
 
-  Modelica.Blocks.Interfaces.RealInput KlaTank5 annotation (Placement(transformation(extent={{30,-74},
-            {50,-54}})));
+  Modelica.Blocks.Interfaces.RealInput KlaTank5 annotation (Placement(transformation(extent={{-14,
+            -102},{6,-82}})));
 
   Modelica.Blocks.Interfaces.RealOutput AE( start=0) annotation (Placement(
         transformation(extent={{88,-10},{108,10}})));

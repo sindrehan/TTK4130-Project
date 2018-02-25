@@ -1043,10 +1043,10 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
     //Q_air=12100.99290780142 is equal to a Kla of 3.5 h^-1 from COST benchmark
     extends Modelica.Icons.Example;
 
-    ASM1.EffluentSink Effluent annotation (Placement(transformation(extent={{88,
-              -28},{108,-8}})));
-    ASM1.SludgeSink WasteSludge annotation (Placement(transformation(extent={{
-              87,-51},{107,-31}})));
+    ASM1.EffluentSink Effluent annotation (Placement(transformation(extent={{91,-29},
+              {111,-9}})));
+    ASM1.SludgeSink WasteSludge annotation (Placement(transformation(extent={{99,-51},
+              {119,-31}})));
     ASM1.SecClarModTakacs Settler annotation (Placement(transformation(extent={
               {48,-5},{68,15}})));
     ASM1.divider2 divider annotation (Placement(transformation(extent={{20,-6},
@@ -1081,8 +1081,8 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
           origin={8,-30},
           extent={{-10,-10},{10,10}},
           rotation=180)));
-    ASM1.pump WastePump(Q_max=385) annotation (Placement(transformation(extent=
-              {{59,-55},{79,-35}})));
+    ASM1.pump WastePump(Q_max=385) annotation (Placement(transformation(extent={{55,-55},
+              {75,-35}})));
     Modelica.Blocks.Sources.Constant Constant2(k=18846)
                                                annotation (Placement(
           transformation(extent={{-9.5,-9.5},{9.5,9.5}},
@@ -1095,7 +1095,7 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
     WasteWater.ASM1.sensor_TKN sensor_TKN1 annotation (Placement(transformation(
             extent={{97,14},{113,30}})));
     WasteWater.ASM1.sensor_COD sensor_COD1 annotation (Placement(transformation(
-            extent={{97,-5},{113,11}})));
+            extent={{102,-5},{118,11}})));
     WasteWater.ASM1.sensor_TSS sensor_TSS1 annotation (Placement(transformation(
             extent={{32,15},{48,30}})));
     Modelica.Blocks.Sources.Constant Constant1(k=55338)
@@ -1109,17 +1109,23 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
       columns=integer(({16,3,4,5,6,7,8,9,10,11,12,13,14,15})),
       tableName="Inf_dry",
       tableOnFile=("Inf_dry") <> "NoName") annotation (Placement(transformation(
-            extent={{-95,76},{-75,96}})));
+            extent={{-117,80},{-97,100}})));
     WasteWater.ASM1.WWSource
                   WWSource1
                            annotation (Placement(transformation(extent={{-69,76},
               {-49,96}})));
     WasteWater.ASM1.aeration_energy aeration_energy
-      annotation (Placement(transformation(extent={{-10,73},{10,93}})));
+      annotation (Placement(transformation(extent={{-2,63},{16,81}})));
     WasteWater.ASM1.pump_energy pump_energy
       annotation (Placement(transformation(extent={{27,-24},{47,-4}})));
     WasteWater.ASM1.effluent_quality effluent_quality1
-      annotation (Placement(transformation(extent={{68,-16},{88,4}})));
+      annotation (Placement(transformation(extent={{69,-17},{85,-1}})));
+    WasteWater.ASM1.influent_quality influent_quality
+      annotation (Placement(transformation(extent={{-76,50},{-56,70}})));
+    WasteWater.ASM1.sludge_production sludge_production
+      annotation (Placement(transformation(extent={{76,-71},{96,-51}})));
+    WasteWater.ASM1.mixing_energy mixing_energy
+      annotation (Placement(transformation(extent={{24,62},{44,82}})));
   equation
     connect(divider.Out1, Settler.Feed) annotation (Line(points={{40,6.6},{44,
             6.6},{44,6.4},{48,6.4}}));
@@ -1136,10 +1142,8 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
             {-32,36.5},{-32.5,36.5}}));
     connect(RecyclePump.Out, mixer.In3) annotation (Line(points={{-94,-14.8},{
             -104,-14.8},{-104,27.5}}));
-    connect(WastePump.Out, WasteSludge.In) annotation (Line(points={{79,-42.2},
-            {81,-42.2},{81,-42},{83,-42},{83,-42.2},{87,-42.2}}));
     connect(WastePump.u, Constant2.y)
-      annotation (Line(points={{60.1,-42.5},{46,-42.5},{46,-60.5},{34.95,-60.5}},
+      annotation (Line(points={{56.1,-42.5},{46,-42.5},{46,-60.5},{34.95,-60.5}},
                                                                      color={0,0,
             255}));
     connect(sensor_NH1.In, Settler.Effluent) annotation (Line(points={{72,15},{
@@ -1148,8 +1152,8 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
             89,10.7},{68.2,10.7}}));
     connect(sensor_TKN1.In, Settler.Effluent) annotation (Line(points={{105,14},
             {105,10.7},{68.2,10.7}}));
-    connect(sensor_COD1.In, Settler.Effluent) annotation (Line(points={{105,-5},
-            {105,10.7},{68.2,10.7}}));
+    connect(sensor_COD1.In, Settler.Effluent) annotation (Line(points={{110,-5},
+            {110,10.7},{68.2,10.7}}));
     connect(Constant2.y, ReturnPump.u)
       annotation (Line(points={{34.95,-60.5},{46,-60.5},{46,-32.5},{16.9,-32.5}},
                                                                        color={0,
@@ -1161,16 +1165,6 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
 
     connect(RecyclePump.u, Constant1.y) annotation (Line(
         points={{-75.1,-14.5},{-75.1,-38.75},{-33,-38.75},{-33,-61}},
-        color={0,0,127},
-        smooth=Smooth.None));
-    connect(CombiTableTime.y, WWSource1.data)
-      annotation (Line(points={{-74,86},{-40,86},{-40,96},{-35,96}}));
-    connect(WWSource1.Out, mixer.In1) annotation (Line(
-        points={{-49.2,79},{-95,79},{-95,43},{-104,43},{-104,35.5}},
-        color={0,0,0},
-        smooth=Smooth.None));
-    connect(tank5.Kla, aeration_energy.KlaTank5) annotation (Line(
-        points={{4.3,8.3},{4.3,14},{-10,14},{-10,67},{4,67},{4,76.6}},
         color={0,0,127},
         smooth=Smooth.None));
     connect(mixer.In2, ReturnPump.Out) annotation (Line(
@@ -1198,15 +1192,40 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
         color={0,0,0},
         smooth=Smooth.None));
     connect(pump_energy.Out_w, WastePump.In) annotation (Line(
-        points={{41,-19.8},{41,-28},{52,-28},{52,-48.3},{59,-48.3}},
+        points={{41,-19.8},{41,-28},{52,-28},{52,-48.3},{55,-48.3}},
         color={0,0,0},
         smooth=Smooth.None));
-    connect(Settler.Effluent, effluent_quality1.In) annotation (Line(
-        points={{68.2,10.7},{68.2,-1.4},{71.6,-1.4}},
+
+    connect(sludge_production.In, WastePump.Out) annotation (Line(
+        points={{79,-61},{75,-61},{75,-42.2}},
+        color={0,0,255},
+        smooth=Smooth.None));
+    connect(tank5.Kla, aeration_energy.KlaTank5) annotation (Line(
+        points={{4.3,8.3},{4.3,22},{-9,22},{-9,63.72},{6.64,63.72}},
+        color={0,0,127},
+        smooth=Smooth.None));
+    connect(mixing_energy.KlaTank5, aeration_energy.KlaTank5) annotation (Line(
+        points={{33.6,62.8},{33.6,53},{-9,53},{-9,63.72},{6.64,63.72}},
+        color={0,0,127},
+        smooth=Smooth.None));
+    connect(influent_quality.Out, mixer.In1) annotation (Line(
+        points={{-66,50},{-66,47},{-107,47},{-107,35.5},{-104,35.5}},
         color={0,0,0},
+        smooth=Smooth.None));
+    connect(WWSource1.Out, influent_quality.In) annotation (Line(
+        points={{-49.2,79},{-49,79},{-49,72},{-83,72},{-83,60},{-73,60}},
+        color={0,0,0},
+        smooth=Smooth.None));
+    connect(effluent_quality1.In, Settler.Effluent) annotation (Line(
+        points={{71.4,-9},{68.2,-9},{68.2,10.7}},
+        color={0,0,255},
         smooth=Smooth.None));
     connect(effluent_quality1.Out, Effluent.In) annotation (Line(
-        points={{83.4,-11.2},{83.4,-16},{88,-16}},
+        points={{77,-17},{91,-17}},
+        color={0,0,0},
+        smooth=Smooth.None));
+    connect(sludge_production.Out, WasteSludge.In) annotation (Line(
+        points={{86,-71},{98,-71},{98,-42.2},{99,-42.2}},
         color={0,0,0},
         smooth=Smooth.None));
     annotation (

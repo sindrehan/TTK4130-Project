@@ -4,10 +4,10 @@ model effluent_quality "Influent quality index"
   extends WasteWater.Icons.Effluent_quality;
   extends Interfaces.stoichiometry;
 
-  Interfaces.WWFlowAsm1in In annotation (Placement(transformation(extent={{-74,36},
-            {-54,56}})));
-  Interfaces.WWFlowAsm1out Out annotation (Placement(transformation(extent={{44,-62},
-            {64,-42}})));
+  Interfaces.WWFlowAsm1in In annotation (Placement(transformation(extent={{-80,-10},
+            {-60,10}})));
+  Interfaces.WWFlowAsm1out Out annotation (Placement(transformation(extent={{-10,
+            -110},{10,-90}})));
   Modelica.Blocks.Interfaces.RealOutput EQ( start=0) annotation (Placement(
         transformation(extent={{88,-10},{108,10}})));
 
@@ -25,6 +25,20 @@ model effluent_quality "Influent quality index"
 
 equation
   In.Q + Out.Q = 0;
+
+  In.Si = Out.Si;
+  In.Ss = Out.Ss;
+  In.Xi = Out.Xi;
+  In.Xs = Out.Xs;
+  In.Xbh = Out.Xbh;
+  In.Xba = Out.Xba;
+  In.Xp = Out.Xp;
+  In.So = Out.So;
+  In.Sno = Out.Sno;
+  In.Snh = Out.Snh;
+  In.Snd = Out.Snd;
+  In.Xnd = Out.Xnd;
+  In.Salk = Out.Salk;
 
   S_NKj0 = In.Snh + In.Snd + In.Xnd + i_xb * (In.Xbh + In.Xba) + i_xp * (In.Xp + In.Xi);
   SS_0 = 0.75 * (In.Xs + In.Xi + In.Xbh + In.Xba + In.Xp);
