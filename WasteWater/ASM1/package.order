@@ -26,6 +26,7 @@ influent_quality
 sludge_production
 mixing_energy
 pump_energy
+overall_cost_indicator
 Examples
 Interfaces
 PreClar

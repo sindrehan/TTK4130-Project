@@ -6574,6 +6574,96 @@ package Icons "Icon definitions for the WasteWater library"
             thickness=0.5),
           Line(points={{50,0},{88,0}})}));
   end Mixing_energy;
+
+  partial model Overall_cost_indicator "Icon for a mixing energy sensor"
+
+    annotation (
+      Icon(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-100,100},{100,60}}, textString=
+                                                 "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            lineColor={0,0,0},
+            textString="ME"),
+          Line(
+            points={{0,-50},{0,-90}},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}})}),
+      Documentation(info="Icon for a chemical oxygen demand sensor "),
+      Diagram(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-100,100},{100,60}}, textString=
+                                                 "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            lineColor={0,0,0},
+            textString="OCI"),
+          Line(
+            points={{0,-50},{0,-90}},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}})}));
+  end Overall_cost_indicator;
   annotation (
     Documentation(info="This package is part of the WasteWater Library and contains
 definitions for the graphical layout of components which are

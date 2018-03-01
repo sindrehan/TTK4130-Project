@@ -12,7 +12,9 @@ model nitri_modKla_2d "ASM1 nitrification tank"
   parameter Real alpha=0.7;
   //  parameter Modelica.SIunits.Length de=4.5 "depth of aeration";
   parameter Real R_air=23.5 "specific oxygen feed factor [gO2/(m^3*m)]";
-  WWU.MassConcentration So_sat "Dissolved oxygen saturation";
+  parameter WWU.MassConcentration So_sat = 4 "Dissolved oxygen saturation";
+  // Temperature dependent oxygen saturation by Simba
+  //So_sat = 8;
 
   //Real Kla "Oxygen transfer factor";
 
@@ -29,8 +31,7 @@ model nitri_modKla_2d "ASM1 nitrification tank"
             -103},{5,-93}})));
 equation
 
-  // Temperature dependent oxygen saturation by Simba
-  So_sat = 8;
+
 
   // extends the Oxygen differential equation by an aeration term
   // aeration [mgO2/l]; AirIn.Q_air needs to be in

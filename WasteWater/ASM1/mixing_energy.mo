@@ -13,8 +13,8 @@ model mixing_energy "Influent quality index"
 
   Real KlaTank1 = 0;
   Real KlaTank2 = 0;
-  Real KlaTank3 = 240;
-  Real KlaTank4 = 240;
+  Real KlaTank3 = 240; // 240 originally
+  Real KlaTank4 = 240; // 240 originally
 
   Real V1 = 1000;
   Real V2 = 1000;

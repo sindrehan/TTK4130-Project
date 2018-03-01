@@ -11,12 +11,14 @@ model pump_energy "Total pump energy"
             {62,66}})));
   Interfaces.WWFlowAsm1out Out_r annotation (Placement(transformation(extent={{-10,
             -112},{10,-92}})));
-  Interfaces.WWFlowAsm1in In_w annotation (Placement(transformation(extent={{54,-26},
-            {74,-6}})));
+  Interfaces.WWFlowAsm1in In_w annotation (Placement(transformation(extent={{62,-38},
+            {82,-18}})));
   Interfaces.WWFlowAsm1out Out_w annotation (Placement(transformation(extent={{30,-68},
             {50,-48}})));
 
-  Modelica.Blocks.Interfaces.RealOutput PE( start = 0);
+  Modelica.Blocks.Interfaces.RealOutput PE( start = 0)
+                                                      annotation (Placement(transformation(extent={{88,-10},
+            {108,10}})));
 
   Real T(start=1e-3);
 equation
@@ -75,7 +77,7 @@ equation
         origin={0,-98},
         extent={{-10,-10},{10,10}},
         rotation=270)), Diagram(coordinateSystem(preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}}), graphics),
+          extent={{-100,-100},{100,100}})),
     Documentation(info="This component measures the flow of an ASM1 wastewater stream and provides
 the result as output signal (to be further processed with blocks of
 the Modelica.Blocks library).

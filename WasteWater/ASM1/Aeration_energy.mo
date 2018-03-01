@@ -11,8 +11,8 @@ model aeration_energy "Ideal sensor to measure chemical oxygen demand (COD)"
 
   Real T(start=1e-3);
 
-  Real KlaTank3 = 240;
-  Real KlaTank4 = 240;
+  Real KlaTank3 = 240; // 240 originally
+  Real KlaTank4 = 240; // 240 originally
 
   Real So_sat = 8;
 
