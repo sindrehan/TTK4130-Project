@@ -1,2 +1,27 @@
-\section*{Assignment 2}\label{sec:Ass1}
-$\dots$
+\section*{2. Dynamic Open-Loop Simulations}\label{sec:Assignment2}
+In this section the open-loop system is simulated with steady-state values as initial conditions. In each following subsection changes are implemented in the model following the procedure of BSM1. Several simulations with the same initial conditions are conducted to verify the model.
+
+\subsection*{(a)}
+Firstly the open-loop system is simulated for 100 days to reach steady state. The initial conditions used for this simulation is given in appendix \ref{sec:AppendixB}, but any arbitrary conditions can be used since the system will reach the same steady-state values. The simulation results are stored in a .mat-file so the steady-state values can be used as initial conditions for later simulations.
+
+\subsection*{(b)}
+\textit{Initialize your next simulation using the previous data and run it for 14 days using the influent
+data contained in the file ”Infdry.txt” for ASM1, as is the case in the Benchplant in ASM1.}
+
+\subsection*{(c)}
+\textit{In a separate file reformulate the equation system in tank5 to automatically change Kla to give an
+output concentration of dissolved oxygen ”SO” of exactly 2g(COD). Explain the observations on Kla.}
+
+
+Used the initial values from day 100 in BenchPlant\_2a\_0-100.mat in this simulation as well as in 2b.
+
+
+\subsection*{(d)}
+\textit{To gauge the performance of the wastewater treatment plant several performance indices have
+been proposed in literature. Implement the following performance indices given in section 6
+to be calculated by Dymola: EQ, PE, AE, IQ and SP to be calculated over the full time period
+from the first day to the 14th day.}
+
+To gauge the performance of the WW treatment plant the following performance indices where implemented: EQ, PE, AE, IQ and SP. The equations related to the WW system performance, EQ, PE, AE, IQ and SP, are defined in Section 6 of the BSM 1 report. The values of $B_i$ in the EQ equation are found in table 10 of the report.  
+
+\textbf{NOTE:} I ligning for $S_NKj0$ bruker vi Xba i stedet for Xxa 
