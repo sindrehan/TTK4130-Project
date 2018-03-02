@@ -1,20 +1,16 @@
-\section*{2. Dynamic Open-Loop Simulations}\label{sec:Assignment2}
-In this section the open-loop system is simulated with steady-state values as initial conditions. In each following subsection changes are implemented in the model following the procedure of BSM1. Several simulations with the same initial conditions are conducted to verify the model.
+\section*{Assignment 2 (Dynamic Open-Loop Simulations)}\label{sec:Assignment2}
+In this section the system is simulated without controllers and disregarding process noise to verify the model implementation. In each following subsection changes are made step-wise in the model following the specifications in BSM1. Several simulations are conducted with similar initial conditions based on steady-state values from an initial 100-day simulation. For this open-loop assessment the default case control variables, given in section 4 of BSM1, have the constant values $Q_a = \unit[55,338]{m^3/d}$ and $K_La(5) = \unit[84]{d^{-1}}$ (tank 5).
 
 \subsection*{(a)}
-Firstly the open-loop system is simulated for 100 days to reach steady state. The initial conditions used for this simulation is given in appendix \ref{sec:AppendixB}, but any arbitrary conditions can be used since the system will reach the same steady-state values. The simulation results are stored in a .mat-file so the steady-state values can be used as initial conditions for later simulations.
+Firstly the open-loop system is simulated for 100 days to reach steady state. To do this the waste water source parameters are set as constant, using values from section 3 of BSM1 which are summarized in Table \ref{tab:load-averages}, appendix \ref{sec:AppendixB}. The initial conditions applied to the simulation are given in appendix \ref{sec:AppendixC}, but any arbitrary conditions can be used since the system will reach the same steady-state values with a sufficiently long simulation period.
+
+From the 100-day simulation it can be seen that the state variables of the system stabilizes. To further verify the model selected results at the end of the simulation period, i.e. at steady state, are compared to the corresponding data provided by the project supervisor (mainly based on steady-state results from sections 4 and 5 of BSM1). The comparison is shown in Table \ref{tab:steady-state-results}, appendix \ref{sec:AppendixB}. It is seen that the data coincides down to the last significant digit, which verifies that the open-loop model is implemented correctly. The results are stored in a separate .mat-file so the steady-state values can be used as initial conditions for later simulations. %%%%% USE IN CONCLUSION %%%%% 
 
 \subsection*{(b)}
-\textit{Initialize your next simulation using the previous data and run it for 14 days using the influent
-data contained in the file ”Infdry.txt” for ASM1, as is the case in the Benchplant in ASM1.}
+The next step is to simulate the open-loop system for a 14-day period using provided weather data for the influent parameters. The steady-state values from the previous simulation are used as initial conditions. 
 
 \subsection*{(c)}
-\textit{In a separate file reformulate the equation system in tank5 to automatically change Kla to give an
-output concentration of dissolved oxygen ”SO” of exactly 2g(COD). Explain the observations on Kla.}
-
-
-Used the initial values from day 100 in BenchPlant\_2a\_0-100.mat in this simulation as well as in 2b.
-
+In this step a duplicate model is created, but with slight modifications. The system in tank 5 is changed so that the oxygen transfer coefficient gives a constant concentration of dissolved oxygen of $SO = \unit[2]{g/m^3}$. This means that $K_La$ is no longer constant, but vary to output the correct $SO$ instead. The modified system is simulated over 14 days, still using the dry weather data and steady-state initial values from the previous steps. The resulting $K_La$ in tank 5 is shown in figure \ref{fig:KlaTank5}, appendix \ref{sec:AppendixA}. It is clear that $K_La$ is no longer constant
 
 \subsection*{(d)}
 \textit{To gauge the performance of the wastewater treatment plant several performance indices have

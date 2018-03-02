@@ -1,36 +1,41 @@
-\documentclass[
-	10pt,				    % Schriftgröße
-	a4paper,         		% Papierformat
-	twocolumn,
-	]{article}
+%\documentclass[
+%	10pt,				    % Schriftgröße
+%	a4paper,         		% Papierformat
+%	twocolumn,
+%	]{article}
 
+\documentclass[journal]{IEEEtran}
 
-\usepackage[T1]{fontenc}
-\usepackage{pslatex}
+%\usepackage[T1]{fontenc}
+%\usepackage{pslatex}
 %\usepackage{natbib}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[font={footnotesize}]{subcaption}
-\usepackage[pdftex]{graphicx}
+%\usepackage[font={footnotesize}]{subcaption}
+\usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{color, colortbl}
-\usepackage{titling}
-\usepackage{balance}
-\usepackage[letterpaper, inner=1.2cm,top=1.3cm,bottom=2.5cm, textheight=24.0cm,textwidth=19.19cm]{geometry}
-\setlength{\columnsep}{0.89cm}
-\usepackage{cleveref}
-\usepackage{appendix}
+%\usepackage{titling}
+%\usepackage{balance}
+%\usepackage[letterpaper, inner=1.2cm,top=1.3cm,bottom=2.5cm, textheight=24.0cm,textwidth=19.19cm]{geometry}
+%\setlength{\columnsep}{0.89cm}
+%\usepackage{cleveref}
 
-\captionsetup{labelfont={normalsize},textfont={normalsize}}
-\captionsetup[subfigure]{labelfont={normalsize},textfont={normalsize}}
+\setlength{\emergencystretch}{1em}
+\tolerance=100
 
-\captionsetup[table]{labelfont={normalsize}, textfont={normalsize}, labelsep=period}
+\renewcommand{\arraystretch}{1.2} %manual table sizes
+
+%GRAPHICS
+\usepackage{wrapfig} %wrap text around figures
+\usepackage[export]{adjustbox}
+\usepackage[justification=centering,font=small]{caption}
+\setlength{\belowcaptionskip}{-0pt}
+\usepackage{subfig}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-
-\usepackage{titlesec}
 
 %UNITS
 \usepackage[]{units} %writing units
@@ -44,29 +49,14 @@
 \addbibresource{references.bib}
 \usepackage{csquotes}
 
-\titleformat*{\section}{\filright\normalsize\rmfamily\uppercase}
-\titleformat*{\subsection}{\large\bfseries}
-%\titleformat*{\subsubsection}{\large\bfseries\itshape}
-\titleformat*{\subsection}{\normalsize\rmfamily\bfseries}
-%\titleformat{\subsubsection}[block]{\hspace{1em}\small\rmfamily}
 
-
-\title{\Large \bf
-Modelica project - Group 36}
+\title{\Large \bf Modelica project - Group 36}
 
 \date{}
 
-\preauthor{}
-\DeclareRobustCommand{\authorthing}{
-\begin{center}
-\begin{tabular}{c c}
-\textit{Sindre Hansen} & \textit{Carita Gyldenskog Ranvik}  \\ 
-& \\ % Blank row
-\textit{Ivan Soløst} & \textit{Thomas Sundvoll}  \\ 
-\end{tabular}
-\end{center}}
-\author{\authorthing}
-\postauthor{}
+\author{
+\textit{Sindre~Hansen}, \textit{Carita~Gyldenskog~Ranvik}  \\ 
+\textit{Ivan~Soløst} \& \textit{Thomas~Sundvoll}}
 
 
 \begin{document}
@@ -74,7 +64,7 @@ Modelica project - Group 36}
 \renewcommand\figurename{Fig.}
 
 %\begin{titlingpage}
-\setlength{\droptitle}{1.0cm}
+%\setlength{\droptitle}{1.0cm}
 \maketitle
 \thispagestyle{empty}
 \pagestyle{empty}
@@ -85,7 +75,10 @@ Modelica project - Group 36}
 %\normalsize
 
 
-\textbf{\textit{Abstract} -- A short abstract (50 to 100 words) in a single paragraph should be included: Tell new or key findings and how you did this study.}
+\begin{abstract} 
+A short abstract (50 to 100 words) in a single paragraph should be included: Tell new or key findings and how you did this study.
+\end{abstract}
+
 \input{Report/abbreviations.tex}
 
 %
@@ -104,16 +97,10 @@ Modelica project - Group 36}
 %
 \section*{Conclusion}
 A brief summary of your results should be included in this section toward the end of the paper.
-%
-%
-\onecolumn
+% Was the open-loop model implementation verified in 2a?
+% What happened to Kla in the simulation in 2c? Why?
 \newpage
-\appendix
-\begin{appendices}
-\input{appendixA.tex}
-\twocolumn
-\input{appendixB.tex}
-\end{appendices}
+\input{appendices.tex}
 
 \printbibliography
 

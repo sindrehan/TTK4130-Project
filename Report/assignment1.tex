@@ -1,17 +1,17 @@
-\section*{Assignment 1}\label{sec:Ass1}
+\section*{Assignment 1 (Implementation of wastewater treatment plant model)}\label{sec:Assignment1}
 %This assignment was about downloading and familiarize ourselves with the wastewater treatment package
-The ASM1 BenchPlant example in WasteWater treatment package for Dymola by Gerald Reichl, \cite{wastwater}, was downloaded and simulated with initial values found in \cref{sec: appendB}. By use of ASM1 a simulation model for BSM1 open loop was made by implementation of the following adjustments:\newline
+The ASM1 BenchPlant example in WasteWater treatment package for Dymola by Gerald Reichl, \cite{wastewater}, was downloaded and simulated with initial values found in \ref{sec:AppendixC}. By use of ASM1 a simulation model for BSM1 open loop was made by implementation of the following adjustments:
 \begin{itemize}
     \item Feedback controllers deleted
     \item Stoichiometry parameters changed to match those in Table 3 of BSM1 report, \cite{alex2008}.
     \item Aeration equation in aeartion tanks "nitri" where set to 
     \begin{equation}
-        aeration=kla(So_{sat}-So)
+        aeration=K_La(So_{sat}-So)
     \end{equation}
-    Where the saturation concentration for oxygen is $So_{sat}=8gm^{-3}$. As given in section 2.3.2 of BSM1 report.
+    Where the saturation concentration for oxygen is $So_{sat}=\unit[8]{gm^{-3}}$. As given in section 2.3.2 of BSM1 report.
     \item Volume and Kla values changed to mach those given in section 2.3.1 and 4 of BSM1 report.
-    \item Pump flowrates, $Q_{a}$ and $Q_{w}$, altered to mach those in section 2.1 and 4. $Q_{r}$ set to 18446$m^3d^-1$, given in project description.   
+    \item Pump flowrates, $Q_a$ and $Q_w$, altered to mach those in section 2.1 and 4. $Q_r$ set to $\unit[18446]{m^3/d}$, given in project description.   
     \item Blower deleted
     \item Temperature inputs deleted
 \end{itemize}
-A figure of BSM1 Open-loop Dymola Implementation can be found in \cref{fig:openloop}. The open loop configuration has constant source and pump inputs, the system shall therefore reach steady state after some time, as can be seen i our results at this stage. 
+A figure of BSM1 Open-loop Dymola Implementation can be found in \ref{fig:openloop}. The open loop configuration has constant source and pump inputs, the system shall therefore reach steady state after some time, as can be seen i our results at this stage. 
