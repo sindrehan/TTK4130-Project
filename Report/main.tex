@@ -4,9 +4,10 @@
 	twocolumn,
 	]{article}
 
+
 \usepackage[T1]{fontenc}
 \usepackage{pslatex}
-\usepackage{natbib}
+%\usepackage{natbib}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[font={footnotesize}]{subcaption}
@@ -31,8 +32,20 @@
 
 \usepackage{titlesec}
 
+%UNITS
+\usepackage[]{units} %writing units
+
+%GRAPHICS
+\graphicspath{{Report/Figures}} %path for figures
+\usepackage{wrapfig} %wrap text around figures
+
+%BIBLIOGHRAPHY & CITATION
+\usepackage[backend=biber,style=numeric,citestyle=numeric,sorting=none]{biblatex}
+\addbibresource{references.bib}
+\usepackage{csquotes}
+
 \titleformat*{\section}{\filright\normalsize\rmfamily\uppercase}
-%\titleformat*{\subsection}{\large\bfseries}
+\titleformat*{\subsection}{\large\bfseries}
 %\titleformat*{\subsubsection}{\large\bfseries\itshape}
 \titleformat*{\subsection}{\normalsize\rmfamily\bfseries}
 %\titleformat{\subsubsection}[block]{\hspace{1em}\small\rmfamily}
@@ -69,39 +82,39 @@ Modelica project - Group 36}
 %\thispagestyle{empty}
 %\pagestyle{empty}
 
-\normalsize
+%\normalsize
 
-\section*{abstract}
-A short abstract (50 to 100 words) in a single paragraph should be included: Tell new or key findings and how you did this study.    
-%
+
+\textbf{\textit{Abstract} -- A short abstract (50 to 100 words) in a single paragraph should be included: Tell new or key findings and how you did this study.}
+\input{Report/abbreviations.tex}
+
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{Report/introduction.tex}
 %
-%
 \input{Report/methods.tex}
-%
 %
 \input{Report/assignment1.tex}
 %
-%
 \input{Report/assignment2.tex}
-%
 %
 \input{Report/assignment3.tex}
 %
-%
-\input{Report/assignment4.tex}
-%
+%\input{Report/assignment4.tex}
 %
 \section*{Conclusion}
 A brief summary of your results should be included in this section toward the end of the paper.
 %
 %
+\onecolumn
+\newpage
+\appendix
 \begin{appendices}
-\section*{Appendixes}
-Figures and tables 
-
+\input{appendixA.tex}
+\twocolumn
+\input{appendixB.tex}
 \end{appendices}
+
+\printbibliography
 
 \end{document}

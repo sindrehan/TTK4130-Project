@@ -1,3 +1,12 @@
 \section*{METHODS AND THEORY }\label{sec:METHODS}
-In this section you may want to elaborate a little bit about the theory and methods you used during the project. This can be for instance controller tunings or the relative gain array. \\
-\indent This section should only focus on the methods and theory. It should not contain any results from the project. The maximal length of the METHODS AND THEORY section is one page.  
+%In this section you may want to elaborate a little bit about the theory and methods you used during the project. This can be for instance controller tunings or the relative gain array. \\
+%\indent This section should only focus on the methods and theory. It should not contain any results from the project. The maximal length of the METHODS AND THEORY section is one page. 
+
+\subsection*{Theory}
+\subsubsection{Wastewater quality indicators}
+Wastewater quality indicators are test methodologies to assess suitability of wastewater for disposal or re-use, \cite{qi}.
+
+\subsection*{Method}
+The waste-water treatment plant is modelled and simulated in Dymola using the component-oriented Modelica language. An example model called Activated Sludge Model 1 (ASM1) from a pre-existing waste-water library is used as basis for the model components and composition. The model equations and parameters are implemented based on the Benchmark Simulation Model no. 1 (BSM1) described in \cite{alex2008}. The ASM1 is modified step wise from the default implementation to the implementation representing the BSM1. Simulations are conducted after each step.
+
+Details for each step, including equation and parameter implementation, are described in the following sections.
