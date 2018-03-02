@@ -1,2 +1,27 @@
-\section*{Assignment 3}\label{sec:Ass1}
-$\dots$
+\section*{Assignment 3 (Open-loop sensitivity analysis)}\label{sec:Assignment3}
+In Assignment 3 we employ the simulation set-up developed in Assignments 1 and 2 to investigate
+the effects of different key process parameters on the efficiency of the wastewater treatment plant.
+To carry-out this analysis please use a constant Kla value for tank5 for the nominal case as given in
+section 4 of the BSM1 report. For the influent data utilise the file ”In f dry.txt” for ASM1 initialised at steady-state, which may be different for each variation of the process parameters.
+\newline
+Gauge the effect of the following parameters on the plant using the performance indices developed
+previously, explain your observations and state the advantages and disadvantages:
+
+\subsection*{(a)}
+\textit{Implement the remaining ME quality indicator over the full 14 days and combine all quality
+indicators for the overall cost indicator (OCI).For ME use the ”i f ”else expression in Modelica.} \newline
+
+We implemented a new sensor for measuring OCI using the formula from the benchmarkWWTP: \newline
+OCI = AE + PE +5*SP + 3*EC + ME
+
+\subsection*{(b)}
+\textit{Volumetric flow-rates of the pumps.} \newline
+Change in volumetric flow-rates of the pumps does not affect the quality indicators.
+
+\subsection*{(c)}
+\textit{Kla values of the aeration tanks} \newline
+When Kla for tank 3 and 4 is reduced by 50\% from 240 to 120, AE is reduced from 3700 to 2250.
+
+\subsection*{(d)}
+\textit{$Y_A$, $Y_H$ and $SO_{sat}$ (for these cases ignore advantages and disadvantages)} \newline
+Change in $SO_{sat}$ from 8 to 4 does not affect the quality indicators. A change in Y\_a from 0.67 to 0.02 and Y\_h from 0.24 to 0.02 does not affect the quality indicators.
