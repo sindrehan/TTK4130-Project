@@ -935,7 +935,7 @@ Parameters:
       columns=integer(({16,3,4,5,6,7,8,9,10,11,12,13,14,15})),
       tableName="Inf_dry",
       tableOnFile=("Inf_dry") <> "NoName") annotation (Placement(transformation(
-            extent={{-95,76},{-75,96}})));
+            extent={{-111,77},{-91,97}})));
     WasteWater.ASM1.WWSource
                   WWSource1
                            annotation (Placement(transformation(extent={{-69,76},
@@ -994,7 +994,7 @@ Parameters:
         color={0,0,127},
         smooth=Smooth.None));
     connect(CombiTableTime.y, WWSource1.data)
-      annotation (Line(points={{-74,86},{-40,86},{-40,96},{-35,96}}));
+      annotation (Line(points={{-90,87},{-40,87},{-40,96},{-35,96}}));
     connect(WWSource1.Out, mixer.In1) annotation (Line(
         points={{-49.2,79},{-95,79},{-95,43},{-104,43},{-104,35.5}},
         color={0,0,0},
@@ -1188,7 +1188,7 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
         color={0,0,0},
         smooth=Smooth.None));
     connect(Settler.Waste, pump_energy.In_w) annotation (Line(
-        points={{61,-4.6},{61,-15.6},{43.4,-15.6}},
+        points={{61,-4.6},{61,-16.8},{44.2,-16.8}},
         color={0,0,0},
         smooth=Smooth.None));
     connect(pump_energy.Out_r, ReturnPump.In) annotation (Line(
@@ -1543,12 +1543,12 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
       Y_h=0.06)              annotation (Placement(transformation(extent={{-6,
               -6},{14,14}})));
     WasteWater.ASM1.nitri
-               tank4(V=1333, alpha=0.7)
-                             annotation (Placement(transformation(extent={{-32,
+               tank4(V=1333, alpha=0.7,
+      Kla=100)               annotation (Placement(transformation(extent={{-32,
               -6},{-12,14}})));
     WasteWater.ASM1.nitri
-               tank3(        alpha=0.7, V=1333)
-                             annotation (Placement(transformation(extent={{-60,
+               tank3(        alpha=0.7, V=1333,
+      Kla=100)               annotation (Placement(transformation(extent={{-60,
               -6},{-40,14}})));
     ASM1.deni tank2 annotation (Placement(transformation(extent={{-48,22},{-28,
               42}})));
@@ -1585,7 +1585,7 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
             extent={{102,-7},{118,9}})));
     WasteWater.ASM1.sensor_TSS sensor_TSS1 annotation (Placement(transformation(
             extent={{32,15},{48,30}})));
-    Modelica.Blocks.Sources.Constant Constant1(k=55338)
+    Modelica.Blocks.Sources.Constant Constant1(k=5533)
                                                annotation (Placement(
           transformation(extent={{-10,-10},{10,10}},
           rotation=180,
