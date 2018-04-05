@@ -1,0 +1,18 @@
+WORK LOG
+
+*Changes inn assignment descriptions (05.04.18): Task 3 divided into tasks 3, 4, 5 and 6.
+
+Feedback from student assistant:
+
+- One of our resulting values is very high, check if units are correct.
+- We must run a new 100-day simulation every time we change a parameter in task 3 (now tasks 5 and 6).
+
+
+(05.04.18)
+-----------
+Redo of task 5 and 6 (previously task 3 b,c and d). Now doing a new 100 day simulation for every change in parameter.
+
+Mostly stuck on getting the right Kla value of 84/d in tank5 on task 5 (as specified in section 4 of BSM1). 
+Setting Kla as a parameter in tank5 gives singularity error. The error propagates into the AE and ME sensors.
+
+Important take-away from this session: the data from combiTable has to be implemented in WWSource to be taken into account!
