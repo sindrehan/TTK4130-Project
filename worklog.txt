@@ -32,3 +32,10 @@ assistant.
 As it turned out (for some unknown reason) the results were better when the exact same simulations were run on Carita's computer 
 instead of the school computers. Student assistant could confirm that Carita's results looked familiar. So tasks 5 and 6 were done 
 on her computer while Ivan and Thomas continued with tasks 5 and 6 on the school computers. 
+
+We made the "perfect settler" on the school computers, but decided to test it on Carita's computer to get valid results.
+
+- Remaining of task 9: Make a copy of the original BenchPlant and insert the new settler. Use settle_initial.mos as initialization
+script and run for a 100 days to reach steady-state.
+
+- Next time: finish task 9 and task 10.
