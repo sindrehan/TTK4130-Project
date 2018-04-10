@@ -28,3 +28,7 @@ same degrees of freedom as before (error messages was useless here).
 New issue with strange reaults from 14-day open-loop sensitivity analysis: none of the indicators reach a fixed value, but decrease
 or increase continuously. We were not able to solve this, so we decided to move on with the faulty model, as recommended by student
 assistant.
+
+As it turned out (for some unknown reason) the results were better when the exact same simulations were run on Carita's computer 
+instead of the school computers. Student assistant could confirm that Carita's results looked familiar. So tasks 5 and 6 were done 
+on her computer while Ivan and Thomas continued with tasks 5 and 6 on the school computers. 
