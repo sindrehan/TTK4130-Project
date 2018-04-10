@@ -10,9 +10,21 @@ Feedback from student assistant:
 
 (05.04.18)
 -----------
-Redo of task 5 and 6 (previously task 3 b,c and d). Now doing a new 100 day simulation for every change in parameter.
+Goal: Redo of task 5 and 6 (previously task 3 b,c and d). Now have to do a new 100 day simulation for every change in parameter.
 
 Mostly stuck on getting the right Kla value of 84/d in tank5 on task 5 (as specified in section 4 of BSM1). 
 Setting Kla as a parameter in tank5 gives singularity error. The error propagates into the AE and ME sensors.
 
 Important take-away from this session: the data from combiTable has to be implemented in WWSource to be taken into account!
+
+
+(10.04.18)
+-----------
+Goal: Fix issues with Kla and finish tasks 5 and 6.
+
+Fixed issue with Kla. Problem was: had to change So back to a variable when Kla was changed back to a constant to maintain the
+same degrees of freedom as before (error messages was useless here).
+
+New issue with strange reaults from 14-day open-loop sensitivity analysis: none of the indicators reach a fixed value, but decrease
+or increase continuously. We were not able to solve this, so we decided to move on with the faulty model, as recommended by student
+assistant.
