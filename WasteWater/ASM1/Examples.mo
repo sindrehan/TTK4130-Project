@@ -1539,8 +1539,8 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
     WasteWater.ASM1.nitri_modKla_tank5
                       tank5(V=1333, alpha=0.7,
       So_sat=8,
-      Y_h=0.67,
-      Y_a=0.24)              annotation (Placement(transformation(extent={{-6,
+      Y_a=0.24,
+      Y_h=0.20)              annotation (Placement(transformation(extent={{-6,
               -6},{14,14}})));
     WasteWater.ASM1.nitri
                tank4(V=1333, alpha=0.7,
@@ -1792,7 +1792,7 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
                       tank5(V=1333, alpha=0.7,
       So_sat=8,
       Y_a=0.24,
-      Y_h=0.67)              annotation (Placement(transformation(extent={{-6,
+      Y_h=0.20)              annotation (Placement(transformation(extent={{-6,
               -6},{14,14}})));
     WasteWater.ASM1.nitri
                tank4(V=1333, alpha=0.7,
@@ -1956,8 +1956,8 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
         points={{85,-71},{98,-71},{98,-42.2},{100,-42.2}},
         color={0,0,0},
         smooth=Smooth.None));
-    connect(influent_quality.In, WWSource_Constant.Out) annotation (Line(points
-          ={{-73,60},{-80,60},{-80,73},{-38.31,73},{-38.31,79.15}}, color={0,0,
+    connect(influent_quality.In, WWSource_Constant.Out) annotation (Line(points=
+           {{-73,60},{-80,60},{-80,73},{-38.31,73},{-38.31,79.15}}, color={0,0,
             255}));
     connect(overall_cost_indicator.AE, aeration_energy.AE) annotation (Line(
           points={{67.8,65.08},{41,65.08},{41,64},{15.82,64},{15.82,72}},

@@ -299,8 +299,6 @@ model nitri "ASM1 nitrification tank"
   Interfaces.WWFlowAsm1out MeasurePort annotation (Placement(transformation(
           extent={{50,40},{60,50}})));
 
-
-
   Interfaces.AirFlow AirIn annotation (Placement(transformation(extent={{-5,
             -103},{5,-93}})));
 equation

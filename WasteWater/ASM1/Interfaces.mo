@@ -85,7 +85,7 @@ air between blower and nitrification tank."));
 
   partial model stoichiometry "ASM1 stoichiometric coefficients"
     // Stoichiometric parameters based on the original ASM1 publication//
-    parameter Real Y_h=0.67
+    parameter Real Y_h=0.20
       "Heterotrophic Yield [g Xbh COD formed/(g COD utilised)]";
     parameter Real Y_a=0.24
       "Autotrophic Yield [g Xba COD formed/(g N utilised)]";

@@ -30,7 +30,6 @@ model nitri_modKla_2d "ASM1 nitrification tank"
             -103},{5,-93}})));
 equation
 
-
   // extends the Oxygen differential equation by an aeration term
   // aeration [mgO2/l]; AirIn.Q_air needs to be in
   // Simulationtimeunit [m3*day^-1]
