@@ -31,8 +31,13 @@ equation
   In.Salk = Out.Salk;
 
   der(T) = 1.0;
-  der(SP*T) = 0.75*(In.Xs + In.Xi + In.Xbh + In.Xba + In.Xp)*In.Q;
+  der(SP*T) = 0.75*(In.Xs + In.Xi + In.Xbh + In.Xba + In.Xp)*In.Q/1000;
   annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
             {100,100}}), graphics), Diagram(coordinateSystem(
-          preserveAspectRatio=false, extent={{-100,-100},{100,100}}), graphics));
+          preserveAspectRatio=false, extent={{-100,-100},{100,100}}), graphics),
+    experiment(
+      StopTime=100,
+      Interval=0.01,
+      Tolerance=1e-07,
+      __Dymola_Algorithm=""));
 end sludge_production;

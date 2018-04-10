@@ -298,8 +298,9 @@ model nitri "ASM1 nitrification tank"
             -10},{110,10}})));
   Interfaces.WWFlowAsm1out MeasurePort annotation (Placement(transformation(
           extent={{50,40},{60,50}})));
-  Modelica.Blocks.Interfaces.RealInput T annotation (Placement(transformation(
-          extent={{-110,30},{-90,50}})));
+
+
+
   Interfaces.AirFlow AirIn annotation (Placement(transformation(extent={{-5,
             -103},{5,-93}})));
 equation
@@ -413,9 +414,11 @@ model WWSource "Wastewater source"
   extends WasteWater.Icons.WWSource;
   Interfaces.WWFlowAsm1out Out annotation (Placement(transformation(extent={{88,
             -80},{108,-60}})));
-  Modelica.Blocks.Interfaces.RealInput data[14];
+  Modelica.Blocks.Interfaces.RealInput data[14]
+    annotation (Placement(transformation(extent={{-100,-10},{-80,10}}, rotation=0)));
 
 equation
+  /*
   Out.Q =-18446;
   Out.Si =30.0;
   Out.Ss =69.50;
@@ -430,8 +433,9 @@ equation
   Out.Snd =6.95;
   Out.Xnd =10.59;
   Out.Salk =7.00;
+  */
 
-  /*Out.Q =-data[1];
+  Out.Q =-data[1];
   Out.Si =data[2];
   Out.Ss =data[3];
   Out.Xi =data[4];
@@ -444,7 +448,7 @@ equation
   Out.Snh =data[11];
   Out.Snd =data[12];
   Out.Xnd =data[13];
-  Out.Salk =data[14];*/
+  Out.Salk =data[14];
 
     annotation (Placement(transformation(extent={{-100,-10},{-80,10}})),
     Documentation(info="This component provides all ASM1 data at the influent of a wastewater treatment plant.
