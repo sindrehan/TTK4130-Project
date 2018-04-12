@@ -1,48 +1,6 @@
 within WasteWater;
 model Settler_Task9
   "Settler based on assumtion of perfect separation"
-  annotation (Icon(coordinateSystem(preserveAspectRatio=false), graphics={
-        Line(points={{-50,40},{-50,-40}}, color={28,108,200}),
-        Line(points={{-50,-40},{50,-40}}, color={28,108,200}),
-        Line(points={{50,-40},{50,40}}, color={28,108,200}),
-        Polygon(
-          points={{-60,40},{-50,30},{-60,20},{-60,40}},
-          lineColor={28,108,200},
-          fillColor={28,108,200},
-          fillPattern=FillPattern.Solid),
-        Polygon(
-          points={{50,40},{60,30},{50,20},{50,40}},
-          lineColor={0,0,0},
-          lineThickness=0.5,
-          fillColor={28,108,200},
-          fillPattern=FillPattern.None),
-        Polygon(
-          points={{50,-10},{60,-20},{50,-30},{50,-10}},
-          lineColor={0,0,0},
-          lineThickness=0.5,
-          fillColor={28,108,200},
-          fillPattern=FillPattern.None),
-        Ellipse(
-          extent={{-26,26},{-14,14}},
-          lineColor={0,0,0},
-          lineThickness=0.5,
-          fillColor={238,46,47},
-          fillPattern=FillPattern.Solid),
-        Line(
-          points={{30,-40},{30,30}},
-          color={0,0,0},
-          thickness=0.5,
-          pattern=LinePattern.Dot,
-          arrow={Arrow.Open,Arrow.Open}),
-        Text(
-          extent={{22,4},{26,-2}},
-          lineColor={0,0,0},
-          pattern=LinePattern.Dot,
-          lineThickness=0.5,
-          fillColor={238,46,47},
-          fillPattern=FillPattern.Solid,
-          textString="h")}),                                     Diagram(
-        coordinateSystem(preserveAspectRatio=false)));
 
 
 
@@ -111,6 +69,46 @@ equation
   Effluent.Snd  = Waste.Snd;
   Effluent.Salk = Waste.Salk;
 
-
-
+  annotation (Icon(coordinateSystem(preserveAspectRatio=false), graphics={
+        Line(points={{-50,40},{-50,-40}}, color={28,108,200}),
+        Line(points={{-50,-40},{50,-40}}, color={28,108,200}),
+        Line(points={{50,-40},{50,40}}, color={28,108,200}),
+        Polygon(
+          points={{-60,40},{-50,30},{-60,20},{-60,40}},
+          lineColor={28,108,200},
+          fillColor={28,108,200},
+          fillPattern=FillPattern.Solid),
+        Polygon(
+          points={{50,40},{60,30},{50,20},{50,40}},
+          lineColor={0,0,0},
+          lineThickness=0.5,
+          fillColor={28,108,200},
+          fillPattern=FillPattern.None),
+        Polygon(
+          points={{50,-10},{60,-20},{50,-30},{50,-10}},
+          lineColor={0,0,0},
+          lineThickness=0.5,
+          fillColor={28,108,200},
+          fillPattern=FillPattern.None),
+        Ellipse(
+          extent={{-26,26},{-14,14}},
+          lineColor={0,0,0},
+          lineThickness=0.5,
+          fillColor={238,46,47},
+          fillPattern=FillPattern.Solid),
+        Line(
+          points={{30,-40},{30,30}},
+          color={0,0,0},
+          thickness=0.5,
+          pattern=LinePattern.Dot,
+          arrow={Arrow.Open,Arrow.Open}),
+        Text(
+          extent={{22,4},{26,-2}},
+          lineColor={0,0,0},
+          pattern=LinePattern.Dot,
+          lineThickness=0.5,
+          fillColor={238,46,47},
+          fillPattern=FillPattern.Solid,
+          textString="h")}),                                     Diagram(
+        coordinateSystem(preserveAspectRatio=false)));
 end Settler_Task9;

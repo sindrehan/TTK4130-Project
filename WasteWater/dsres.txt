@@ -1,0 +1,52 @@
+#1
+char Aclass(3,11)
+Atrajectory
+1.0
+
+char names(22,18)
+Time
+sensor_NO.Sno
+sensor_O2.So
+Feedback.y
+PI1.y
+PI1.x
+Constant1.y
+PI2.y
+PI2.x
+NitrogenSetpoint.y
+Feedback1.y
+Limiter1.y
+Constant2.y
+Temperature.y
+FixedDelay1.y
+sensor_NH1.Snh
+sensor_NO1.Sno
+sensor_TKN1.TKN[1]
+sensor_TKN1.TKN[2]
+sensor_COD1.COD
+OxygenSetpoint.y
+sensor_TSS1.TSS
+
+float data(1,22)
+0           # Time
+0.0
+0.0
+0.0
+0.0
+0
+1
+15000.0
+0
+1
+1.0
+0.0
+1
+15
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
