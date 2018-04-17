@@ -48,6 +48,12 @@ LOG DAY MISSING
 -------------
 Goal: Complete task 5 (again) event though results are wrong. Complete task 10.
 
-Task 5: 
+Task 5a: 
 - Reduced volumetric flow in Q_a (RecyclePump) by 30% and ran open-loop assessment.
 - Reduced volumetric flow rate in Q_r (ReturnPump) by 30% and ran open-loop assessment.
+
+Task 5b:
+- Reduced Y_H by 40% and ran open-loop assessment.
+- Increased Y_H by 40% and ran open-loop assessment.
+- Reduced Y_A by 40% and ran open-loop assessment.
+- Increased Y_A by 40% and ran open-loop assessment.
