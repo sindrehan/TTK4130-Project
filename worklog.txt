@@ -39,3 +39,15 @@ We made the "perfect settler" on the school computers, but decided to test it on
 script and run for a 100 days to reach steady-state.
 
 - Next time: finish task 9 and task 10.
+
+---------------
+LOG DAY MISSING
+---------------
+
+(17.04.2018)
+-------------
+Goal: Complete task 5 (again) event though results are wrong. Complete task 10.
+
+Task 5: 
+- Reduced volumetric flow in Q_a (RecyclePump) by 30% and ran open-loop assessment.
+- Reduced volumetric flow rate in Q_r (ReturnPump) by 30% and ran open-loop assessment.
