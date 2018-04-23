@@ -1592,11 +1592,11 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
           origin={-22,-61})));
     Modelica.Blocks.Sources.CombiTimeTable CombiTableTime(
       table=[0,0; 1,1],
-      columns=integer(({16,3,4,5,6,7,8,9,10,11,12,13,14,15})),
       tableName="Inf_dry",
       tableOnFile=("Inf_dry") <> "NoName",
       fileName=ModelicaServices.ExternalReferences.loadResource(
-          "modelica://WasteWater/Resources/ASM1/Inf_dry.txt"))
+          "modelica://WasteWater/Resources/ASM1/Inf_dry.txt"),
+      columns=integer(({2,3,4,5,6,7,8,9,10,11,12,13,14,15})))
                                            annotation (Placement(transformation(
             extent={{-105,76},{-85,96}})));
     WasteWater.ASM1.WWSource
@@ -2229,8 +2229,7 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
     the parameter set used in COST.
     But it is possible. During the validation phase of this library the steady state and dynamic results
     from the COST simulation benchmark could exactly be reproduced.
-"),
-      __Dymola_Commands(file="Resources/ASM1/settler_initial.mos"));
+"),   __Dymola_Commands(file="Resources/ASM1/settler_initial.mos"));
   end BenchPlant_9;
 
   class BenchPlant_9_constant "COST Benchmark WWTP Configuration"
@@ -2439,8 +2438,7 @@ PS: For those who want to reproduce the exact figures from the COST simulation b
     the parameter set used in COST.
     But it is possible. During the validation phase of this library the steady state and dynamic results
     from the COST simulation benchmark could exactly be reproduced.
-"),
-      __Dymola_Commands(file="Resources/ASM1/settler_initial.mos"));
+"),   __Dymola_Commands(file="Resources/ASM1/settler_initial.mos"));
   end BenchPlant_9_constant;
   annotation (
     Documentation(info="This package contains example ASM1 wastewater treatment plant models to demonstrate the usage of
