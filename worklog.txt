@@ -57,3 +57,17 @@ Task 5b:
 - Increased Y_H by 40% and ran open-loop assessment.
 - Reduced Y_A by 40% and ran open-loop assessment.
 - Increased Y_A by 40% and ran open-loop assessment.
+
+(23.04.2018)
+-------------
+Goal: Complete task 5, adding figures and analysis to report.
+
+Done!
+
+Note: Carita should add units to the figures in task 6.
+
+Ramaining work: 
+- Write theory section
+- Edit conclusion
+- Write short about activated sludge model in introduction (https://en.wikipedia.org/wiki/Sewage_treatment#Pretreatment)
+- Look over report.
